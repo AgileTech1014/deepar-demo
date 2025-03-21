@@ -4,16 +4,16 @@ import "./App.css";
 
 const App = () => {
   useEffect(() => {
-    console.log(process.env.REACT_APP_DEEPAR_LICENSE_KEY);
-
     const initDeepAR = async () => {
-      const deepARInstance = await deepar.initialize({
-        licenseKey: process.env.REACT_APP_DEEPAR_LICENSE_KEY, // Add to .env file
-        previewElement: document.getElementById("deepar-canvas"),
-        effect: "https://cdn.jsdelivr.net/npm/deepar/effects/aviators",
+      deepARRef.current = await deepar.initialize({
+        licenseKey: process.env.REACT_APP_DEEPAR_LICENSE_KEY,
+        canvas: document.getElementById("deepar-canvas"),
+        effect: "/assets/effects/viking_helmet/viking_helmet.deepar",
+        onInitialize: () => {
+          console.log("DeepAR Initialized");
+          deepARRef.current.start(); // Correct method to start DeepAR
+        },
       });
-
-      deepARInstance.startVideo(true);
     };
 
     initDeepAR();
