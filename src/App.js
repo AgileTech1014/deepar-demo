@@ -14,13 +14,11 @@ const App = () => {
 
       loadingProgressBar.style.width = "100%";
 
-      const effectPath = "/effects/ray-ban-wayfarer.deepar";
-
       try {
         const deepARInstance = await deepar.initialize({
           licenseKey: process.env.REACT_APP_DEEPAR_LICENSE_KEY,
           canvas: previewElement,
-          effect: effectPath,
+          effect: "/resources/effects/ray-ban-wayfarer.deepar",
           rootPath: "/resources",
           additionalOptions: {
             cameraConfig: {
