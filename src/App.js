@@ -21,7 +21,7 @@ const App = () => {
           licenseKey: process.env.REACT_APP_DEEPAR_LICENSE_KEY,
           canvas: previewElement,
           effect: effectPath,
-          rootPath: "/deepar-resources",
+          rootPath: "/resources",
           additionalOptions: {
             cameraConfig: {
               // facingMode: "environment"
