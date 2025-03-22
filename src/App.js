@@ -20,6 +20,7 @@ const App = () => {
           additionalOptions: {
             cameraConfig: {
               // facingMode: "environment"
+              resolutionPreset: "hd"
             },
           },
           onInitialize: () => {
