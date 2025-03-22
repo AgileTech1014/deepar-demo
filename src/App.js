@@ -14,8 +14,8 @@ const App = () => {
         const deepARInstance = await deepar.initialize({
           licenseKey: process.env.REACT_APP_DEEPAR_LICENSE_KEY,
           canvas: canvasElement,
-          effect: "/resources/effects/ray-ban-wayfarer.deepar",
-          rootPath: "/resources",
+          effect: "/effects/ray-ban-wayfarer.deepar",
+          rootPath: "/deepar-resources",
           additionalOptions: {
             cameraConfig: {
               facingMode: "environment"
