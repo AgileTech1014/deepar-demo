@@ -14,12 +14,12 @@ const App = () => {
         const deepARInstance = await deepar.initialize({
           licenseKey: process.env.REACT_APP_DEEPAR_LICENSE_KEY,
           canvas: canvasElement,
-          effect: "/resources/effects/MakeupLook.deepar",
+          effect: "/resources/effects/ray-ban-wayfarer.deepar",
           rootPath: "/resources",
           additionalOptions: {
             cameraConfig: {
-              // facingMode: "environment"
-              resolutionPreset: "fullhd"
+              facingMode: "environment"
+              // resolutionPreset: "fullhd"
             },
           },
           onInitialize: () => {
