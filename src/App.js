@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import * as deepar from "deepar";
-import "./App.css";
 
 const App = () => {
   useEffect(() => {
@@ -15,12 +14,12 @@ const App = () => {
         const deepARInstance = await deepar.initialize({
           licenseKey: process.env.REACT_APP_DEEPAR_LICENSE_KEY,
           canvas: canvasElement,
-          effect: "/resources/effects/ray-ban-wayfarer.deepar",
+          effect: "/resources/effects/MakeupLook.deepar",
           rootPath: "/resources",
           additionalOptions: {
             cameraConfig: {
               // facingMode: "environment"
-              resolutionPreset: "hd"
+              resolutionPreset: "fullhd"
             },
           },
           onInitialize: () => {
